@@ -4,12 +4,25 @@
     box-sizing: border-box;
     color: #e0f7fa ;
 }
-
-/* .vh-box1{
-    height: 100vh;
-} */
+header{
+    position: fixed;
+    right: 50px;
+}
+.vertical{
+    letter-spacing: 3px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+.v-line-1{
+    margin-right: 15px ;
+    border-right: 1px solid #3f3f3f;
+    height: 10rem;
+}
 body{
     background-color: rgb(11, 11, 32);
+}
+.top{
+    margin-top: 4rem;
 }
 .cta{
     position: fixed;
@@ -37,7 +50,7 @@ footer{
     flex-direction: column;
     margin-left: 50px;
 }
-.v-line{
+.v-line-2{
     margin-left: 15px ;
     border-left: 1px solid #3f3f3f;
     height: 10rem;
@@ -78,4 +91,15 @@ footer{
         border: 0 solid;
         width: 0;
     }
+}
+
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00838f;
+    background-image: linear-gradient(90deg, #00838f 0%, #b2ebf2 50%);
+    pointer-events: none;
+
 }
