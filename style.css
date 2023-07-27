@@ -4,9 +4,6 @@
     box-sizing: border-box;
     color: #e0f7fa ;
 }
-html{
-    scroll-behavior: smooth;
-}
 header{
     position: fixed;
     right: 50px;
@@ -21,17 +18,37 @@ header{
     border-right: 1px solid #3f3f3f;
     height: 10rem;
 }
+.container{
+    height: 100vh;
+    padding-top:10% ;
+}
 body{
     background-color: #0b0b20;
+    height: 100vh;
 }
-.top{
-    margin-top: 4rem;
-}
-.cta{
+
+.cont{
     position: fixed;
 }
+.vh-box1{
+    height: 100%;
+}
+
+.vh-box1-1{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content:center ;
+}
+
 p{
     text-align: justify;
+}
+p:hover{
+    color: rgb(197, 255, 255);
+    transition-duration: 3s;
+    transition-property:color;
 }
 .text-padd{
     margin-top: 2rem;
@@ -66,13 +83,38 @@ p{
     transition-duration: 1s;
     transition-property: border, background-color, color, border-radius;
 }
+.box_3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.box_3 a img{
+    width: 45%;
+    margin: 10px;
+    transition:transform 1s;   
+}
+.box_3 a img:hover{
+     transform: scale(1.1);
+}
 
+
+/* CURRICULO */
+/* .bottom{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+} */
 /* FOOTER */
 footer{
     position: fixed;
-    bottom: 1px;
+    bottom: 0;
     left: 50px;
 }
+
 .redes{
     display: flex;
     flex-direction: column;
@@ -85,27 +127,36 @@ footer{
 }
 
 @media (max-width: 992px) {
-    .cta{
-    position: initial;
+    header{
+        position: initial;
     }
-    .redes{
-        flex-direction: row-reverse;
-        margin-left: 50px;
+    .vertical{
+        writing-mode: horizontal-tb;
+        text-align: end;
+        margin-right: 50px;
     }
-    .v-line{
-        margin: 5px;
-        border-left: 0px;
-        border-bottom: 1px solid #3f3f3f;
-        width: 50px;
-        height: 1rem;
-    } 
-    .redes a{
-        margin: auto 5px;
+    .v-line-1{
+        margin-top: 13px;
+        position: absolute;
+        border-right: 0 solid #3f3f3f;
+        border-top: 1px solid #3f3f3f;
+        width: 65%;
+        height: 2rem;
     }
+
 }
 @media (max-width: 600px) {
+    .v-line-1{
+        margin-top: 13px;
+        position: absolute;
+        border-right: 0 solid #3f3f3f;
+        border-top: 1px solid #3f3f3f;
+        width: 40%;
+        height: 2rem;
+    }
     footer{
         position: initial;
+        margin: auto;
     }
     .tablet-mobil{
         display: flex;
@@ -113,10 +164,15 @@ footer{
         align-items: center;
     }
     .redes{
-        margin-left: 0;
+        flex-direction: row-reverse;
+        margin: auto;
     }
-    .v-line{
-        border: 0 solid;
-        width: 0;
+    .redes a{
+        margin:10px;
+    }
+    .v-line-2{
+        margin: 0;
+        border-left: 0 solid #3f3f3f;
+        width: 50%;
     }
 }
